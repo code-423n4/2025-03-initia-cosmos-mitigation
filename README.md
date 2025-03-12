@@ -1,4 +1,4 @@
-# [Sponsorname] Mitigation Review
+# Initia Cosmos Mitigation Review
 - Total Prize Pool: XXX XXX
   - Warden awards: XXX XXX
   - Judge awards: XXX XXX
@@ -9,45 +9,50 @@
 
 ## Important note 
 
-Each warden must submit a mitigation review for *every* individual PR listed in the `Scope` section below. **Incomplete mitigation reviews will not be eligible for awards.**
+Each warden must submit a mitigation review for *every* finding listed in the `Scope` section below. **Incomplete mitigation reviews will not be eligible for awards.**
 
 ## Findings being mitigated
 
 Mitigations of all High and Medium issues will be considered in-scope and listed here.
 
-- [H-01: Title](link to Github issue)
-
-[ ⭐️ SPONSORS ADD INFO HERE ]
-
-## Overview of changes [optional]
-
-Please provide context about the mitigations that were applied if applicable and identify any areas of specific concern. 
+- [F-10: minievm fails to charge intrinsic gas costs for EVM transactions, allowing the abuse of the accesslist to consume computational resources without proper compensation](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-10)
+- [F-11: Explicit gas limit on low-level Solidity calls can be bypassed by dispatched EVM calls via the custom Cosmos precompile](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-11)
+- [F-7: `ExecuteRequest`'s are not properly removed from the context queue](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-7)
+- [F-9: JSON-RPC `FilterCriteria.Addresses` are unbound and can be used to DoS the RPC](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-9)
+- [F-13: 	EVM stack overflow error leads to no gas being charged, which can be exploited to DoS the chain by dispatching EVM calls via the cosmos precompile](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-13)
+- [F-135: Precompiles fail to charge gas in case of an error leading to a DOS vector](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-135)
+- [F-3: Wrong handling of ERC20 denoms in `ERC20Keeper::BurnCoins`](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-3)
+- [F-17: 	`GASLIMIT` opcode returns transaction gas limit instead of block gas limit resulting in incompatibility with the EVM](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-17)
+- [F-19: Amino legacy signing method broken because of name mismatch](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-19)
+- [F-26: MsgCreate2 deviates from EVM spec causing a large range of address not reachable](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-26)
+- [F-1: setBeforeSendHook can never delete an existing store due to vulnerable validate](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-1)
+- [F-112: IBC channel version negotiation bypass in IBC hooks middleware](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-112)
+- [F-61: Pool fraction is not truncated when allocating the tokens allowing to receive more rewards than owed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-61)
+- [F-15: jsonutils precompile missing in access list](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-15)
 
 ## Scope
 
-### Branch
-[ ⭐️ SPONSORS ADD A LINK TO THE BRANCH IN YOUR REPO CONTAINING ALL PRS ]
-
 ### Mitigation of High & Medium Severity Issues
-[ ⭐️ SPONSORS ADD ALL RELEVANT PRs TO THE TABLE BELOW:]
-
-Wherever possible, mitigations should be provided in separate pull requests, one per issue. If that is not possible (e.g. because several audit findings stem from the same core problem), then please link the PR to all relevant issues in your findings repo. 
 
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
-| https://github.com/your-repo/sample-contracts/pull/XXX | H-01 | This mitigation does XYZ | 
-
-### Additional scope to be reviewed
-[ ⭐️ CAS PLEASE REMOVE THIS SECTION IF THE SPONSOR IS ONLY MITIGATING HMS]
-
-[ ⭐️ SPONSORS ADD ALL RELEVANT PRs TO THE TABLE BELOW:]
-
-These are additional changes that will be in scope.
-
-| URL | Reference ID | Purpose | 
-| ----------- | ------------- | ----------- |
-| https://github.com/your-repo/sample-contracts/pull/XXX | ADD-01 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/pull/170/files) | F-10 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/pull/165/commits/c7afb0edc4f1535d15423a3707d953ac48328971#diff-4aaff0c187848f578730cdb177b834f037f8f35b444dbdd87bb000129c45369b) | F-11 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/commit/1dd732449ea414b0e3c3f6efd085d38e11d058ed) | F-7 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/pull/165/commits/024640e8d972e73f9411adbddc8ea2c61a276e69) | F-9 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/commit/7c83e01a2c6d5cfb28354f251de9897f700096e1) | F-13 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/commit/7c83e01a2c6d5cfb28354f251de9897f700096e1) | F-135 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/pull/168) | F-3 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/pull/171) | F-17 | This mitigation does XYZ | 
+| [Link 1](https://github.com/initia-labs/initia/pull/349/commits/16b436610b8d3d12d01f2743efb4961289f30c91), [Link 2](https://github.com/initia-labs/miniwasm/pull/97/commits/8bf9c2bdeeb009adbb09b59d1555ba21c5433c18), [Link 3](https://github.com/initia-labs/minievm/pull/165/commits/68d4c52b6ce4571e353b7811774e41038dd120ad) | F-19 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/commit/3650a360d88896a29ddcdee6f2d9060847e6349b) | F-26 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/miniwasm/pull/97/commits/5a0b2418c29622d991a11e4949019629ee53d54f) | F-1 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/initia/commit/eb230d9cfd3f60ee3e0ecbd3b1874f12f382b7b9) | F-112 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/initia/pull/354/commits/c43ab685be92f6fb222416d18f29ec22f1a698c0) | F-61 | This mitigation does XYZ | 
+| [Link](https://github.com/initia-labs/minievm/pull/165/commits/9ebf34cd1aab62b659aa0129c205383ba70b1b4f#diff-adef48e8d5e473dc2b37518579db1a3b7222e0ed0c7ed8a12ae0142f63488321) | F-15 | This mitigation does XYZ | 
 
 ## Out of Scope
 
-Please list any High and Medium issues that were judged as valid but you have chosen not to fix.
+- [F-6: A regular Cosmos SDK message can be disguised as an EVM transaction, causing `ListenFinalizeBlock` to error which prevents the block from being indexed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-6)
+- [F-14: Contract deployment restriction can be bypassed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-6)
+- [F-16: `COINBASE` opcode returns an empty address instead of the block proposer resulting in incompatibility with the EVM](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-16)
