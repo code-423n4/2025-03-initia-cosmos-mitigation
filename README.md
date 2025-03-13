@@ -1,11 +1,11 @@
 # Initia Cosmos Mitigation Review
-- Total Prize Pool: XXX XXX
-  - Warden awards: XXX XXX
-  - Judge awards: XXX XXX
-  - Scout awards: XXX XXX
+- Total Prize Pool: $16,000 in USDC
+  - Warden awards: $13,350 in USDC
+  - Judge awards: $2,400 in USDC
+  - Scout awards: $250 in USDC
 - [Warden guidelines for C4 mitigation reviews](https://code4rena.notion.site/Guidelines-for-C4-mitigation-reviews-ed10fc5cfbf640bd8dcec66f38b343c4)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts March 14, 2025 20:00 UTC
+- Ends March 19, 2025 20:00 UTC 
 
 ## Important note 
 
