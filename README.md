@@ -22,6 +22,7 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 - [F-13: 	EVM stack overflow error leads to no gas being charged, which can be exploited to DoS the chain by dispatching EVM calls via the cosmos precompile](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-13)
 - [F-135: Precompiles fail to charge gas in case of an error leading to a DOS vector](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-135)
 - [F-3: Wrong handling of ERC20 denoms in `ERC20Keeper::BurnCoins`](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-3)
+- [F-6: A regular Cosmos SDK message can be disguised as an EVM transaction, causing `ListenFinalizeBlock` to error which prevents the block from being indexed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-6)
 - [F-17: 	`GASLIMIT` opcode returns transaction gas limit instead of block gas limit resulting in incompatibility with the EVM](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-17)
 - [F-19: Amino legacy signing method broken because of name mismatch](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-19)
 - [F-26: MsgCreate2 deviates from EVM spec causing a large range of address not reachable](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-26)
@@ -43,6 +44,7 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 | [Link](https://github.com/initia-labs/minievm/commit/7c83e01a2c6d5cfb28354f251de9897f700096e1) | F-13 | Change to return exact error only at simulate or checktx | 
 | [Link](https://github.com/initia-labs/minievm/commit/7c83e01a2c6d5cfb28354f251de9897f700096e1) | F-135 | Change to return exact error only at simulate or checktx | 
 | [Link](https://github.com/initia-labs/minievm/pull/168) | F-3 | Burn coins error | 
+| [Link](https://github.com/initia-labs/minievm/pull/182) | F-6 | fix: `ConvertCosmosTxToEthereumTx` to properly check type url  | 
 | [Link](https://github.com/initia-labs/minievm/pull/171) | F-17 | Use block gas limit in block context | 
 | [Link 1](https://github.com/initia-labs/initia/pull/349/commits/16b436610b8d3d12d01f2743efb4961289f30c91), [Link 2](https://github.com/initia-labs/miniwasm/pull/97/commits/8bf9c2bdeeb009adbb09b59d1555ba21c5433c18), [Link 3](https://github.com/initia-labs/minievm/pull/165/commits/68d4c52b6ce4571e353b7811774e41038dd120ad) | F-19 | Fix amino  | 
 | [Link](https://github.com/initia-labs/minievm/commit/3650a360d88896a29ddcdee6f2d9060847e6349b) | F-26 | Add salt range check | 
