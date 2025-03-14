@@ -55,5 +55,5 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 
 ## Out of Scope
 
-- [F-14: Contract deployment restriction can be bypassed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-6)
+- [F-14: Contract deployment restriction can be bypassed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-14)
 - [F-16: `COINBASE` opcode returns an empty address instead of the block proposer resulting in incompatibility with the EVM](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-16)
