@@ -53,6 +53,8 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 | [Link](https://github.com/initia-labs/initia/pull/354/commits/c43ab685be92f6fb222416d18f29ec22f1a698c0) | F-61 | Use quo truncate at distribution pool fraction calculation | 
 | [Link](https://github.com/initia-labs/minievm/pull/165/commits/9ebf34cd1aab62b659aa0129c205383ba70b1b4f#diff-adef48e8d5e473dc2b37518579db1a3b7222e0ed0c7ed8a12ae0142f63488321) | F-15 | Apply Ottersec audit | 
 
+**Note:** test files are out of scope
+
 ## Out of Scope
 
 - [F-14: Contract deployment restriction can be bypassed](https://code4rena.com/evaluate/2025-02-initia-cosmos/findings/F-14)
